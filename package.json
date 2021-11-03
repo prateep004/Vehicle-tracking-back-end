@@ -10,7 +10,7 @@
     "clean": "rimraf ./dist",
     "tsc": "tsc",
     "build": "npm run clean && npm run tsc",
-    "watch-node": "node dist/server.js",
+    "watch-node": "nodemon dist/server.js",
     "watch-ts": "tsc -w"
   },
   "repository": {
