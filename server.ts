@@ -1,5 +1,6 @@
 
 const fastify = require('fastify')({ logger: true });
+const PORT = process.env.PORT || 8080;
 
 // Declare a route
 fastify.get('/', async (request, reply) => {
@@ -9,7 +10,7 @@ fastify.get('/', async (request, reply) => {
   // Run the server!
   const start = async () => {
     try {
-      await fastify.listen(3000)
+      await fastify.listen(PORT)
     } catch (err) {
       fastify.log.error(err)
       process.exit(1)
