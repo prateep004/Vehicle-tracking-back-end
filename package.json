@@ -1,0 +1,29 @@
+{
+  "name": "vehicle-tracking-back-end",
+  "version": "1.0.0",
+  "description": "back node js api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prateep004/Vehicle-tracking-back-end.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prateep004/Vehicle-tracking-back-end/issues"
+  },
+  "homepage": "https://github.com/prateep004/Vehicle-tracking-back-end#readme",
+  "dependencies": {
+    "fastify": "^3.22.1",
+    "fastify-oas": "^3.0.8",
+    "mssql": "^7.2.1",
+    "tsconfig": "^7.0.0",
+    "typeorm": "^0.2.38"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
