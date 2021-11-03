@@ -2,7 +2,7 @@
 import { Column, Entity, CreateDateColumn, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity({ name: "coordinates" })
-export class Vehicles {
+export class Coordinates {
     @PrimaryGeneratedColumn()
     id: number
 
