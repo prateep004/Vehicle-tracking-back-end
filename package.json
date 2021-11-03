@@ -7,7 +7,8 @@
     "dev": "ts-node-dev --respawn --no-notify server.ts",
     "start": "npm run clean && npm run build && node dist/server.js",
     "build": "npm run clean && tsc -b",
-    "clean": "tsc -b --clean"
+    "clean": "tsc -b --clean",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
