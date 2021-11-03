@@ -5,11 +5,13 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/server.js",
+    "start": "node server.js",
     "rimraf": "./node_modules/rimraf/bin.js",
     "clean": "rimraf ./dist",
     "tsc": "tsc",
-    "build": "npm run clean && npm run tsc"
+    "build": "npm run clean && npm run tsc",
+    "watch-node": "node dist/server.js",
+    "watch-ts": "tsc -w"
   },
   "repository": {
     "type": "git",
