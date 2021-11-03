@@ -2,16 +2,18 @@
   "name": "vehicle-tracking-back-end",
   "version": "1.0.0",
   "description": "back node js api",
-  "main": "server.js",
+  "main": "dist/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "dev": "node server.js",
     "rimraf": "./node_modules/rimraf/bin.js",
     "clean": "rimraf ./dist",
-    "tsc": "tsc",
+    "build-ts": "tsc",
+    "postinstall": "npm run build-ts",
+    "start": "npm run serve",
+    "serve": "node dist/server.js",
     "watch-node": "nodemon dist/server.js",
-    "watch-ts": "tsc -w",
-    "postinstall": "tsc"
+    "watch-ts": "tsc -w"
   },
   "repository": {
     "type": "git",
