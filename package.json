@@ -7,13 +7,14 @@
     "heroku-postbuild": "npm run build-ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --respawn --no-notify server.ts",
+    "start": "npm run serve",
     "rimraf": "./node_modules/rimraf/bin.js",
     "clean": "rimraf ./dist",
     "build-ts": "tsc",
     "serve": "node dist/server.js",
     "watch-node": "nodemon dist/server.js",
     "watch-ts": "tsc -w",
-    "start": "npm run serve"
+    "postinstall": "npm install --save"
   },
   "repository": {
     "type": "git",
