@@ -5,10 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node build/server.ts",
+    "start": "node dist/server",
+    "rimraf": "./node_modules/rimraf/bin.js",
     "clean": "rimraf ./dist",
     "tsc": "tsc",
-    "build": "npm run tsc",
+    "build": "npm run clean && npm run tsc",
     "postinstall": "npm run build"
   },
   "repository": {
@@ -25,9 +26,11 @@
     "fastify": "^3.22.1",
     "fastify-oas": "^3.0.8",
     "mssql": "^7.2.1",
+    "rimraf": "^3.0.2",
     "tsc": "^2.0.3",
     "tsconfig": "^7.0.0",
-    "typeorm": "^0.2.38"
+    "typeorm": "^0.2.38",
+    "typescript": "^4.4.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.14"
