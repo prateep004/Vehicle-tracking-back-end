@@ -1,1 +1,1 @@
-web: ls && node dist/server.js
+web: node server.js
