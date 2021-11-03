@@ -25,6 +25,7 @@
     "fastify": "^3.22.1",
     "fastify-oas": "^3.0.8",
     "mssql": "^7.2.1",
+    "tsc": "^2.0.3",
     "tsconfig": "^7.0.0",
     "typeorm": "^0.2.38"
   },
