@@ -9,10 +9,9 @@
     "rimraf": "./node_modules/rimraf/bin.js",
     "clean": "rimraf ./dist",
     "tsc": "tsc",
-    "build": "npm run clean && npm run tsc",
     "watch-node": "nodemon dist/server.js",
     "watch-ts": "tsc -w",
-    "postinstall": "tsc && mv -i -v public dist/ && rm -v -rf src"
+    "postinstall": "tsc"
   },
   "repository": {
     "type": "git",
