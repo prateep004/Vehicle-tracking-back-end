@@ -14,7 +14,7 @@
     "serve": "node dist/server.js",
     "watch-node": "nodemon dist/server.js",
     "watch-ts": "tsc -w",
-    "postinstall": "npm install --save"
+    "postinstall": "npm run build-ts"
   },
   "repository": {
     "type": "git",
