@@ -33,7 +33,7 @@ function createServer() {
             servers: [
                 { url: "http://localhost:8080", description: "development" },
                 {
-                    url: "https://<production-url>",
+                    url: "https://",
                     description: "production"
                 }
             ],
