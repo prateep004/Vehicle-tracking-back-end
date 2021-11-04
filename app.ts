@@ -2,6 +2,7 @@ import fastify from "fastify";
 import path from "path";
 import AutoLoad from "fastify-autoload";
 import db from "./plugins/db";
+import valid_date from "./plugins/valid_date";
 
 export const prefix = 'api/v1';
 
@@ -30,7 +31,7 @@ function createServer() {
                 version: "0.1.0"
             },
             servers: [
-                { url: "http://localhost:3000", description: "development" },
+                { url: "http://localhost:8080", description: "development" },
                 {
                     url: "https://<production-url>",
                     description: "production"
@@ -45,15 +46,16 @@ function createServer() {
 
     console.log("create register db");
     server.register(db);
+    server.register(valid_date);
 
 
     console.log("create register autoLoad");
 
-    // server.register(AutoLoad, {
-    //     dir: path.join(__dirname, 'modules'),
-    //     options: Object.assign({ prefix: prefix }, server.options),
-    //     indexPattern: /.*routes(\.ts|\.js|\.cjs|\.mjs)$/,
-    // });
+    server.register(AutoLoad, {
+        dir: path.join(__dirname, 'modules'),
+        options: Object.assign({ prefix: prefix }, server.options),
+        indexPattern: /.*routes(\.ts|\.js|\.cjs|\.mjs)$/,
+    });
 
     return server
 }
